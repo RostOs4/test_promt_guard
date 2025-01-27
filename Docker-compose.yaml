@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - TOKENIZERS_PARALLELISM=false
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    # Добавим перезапуск сервиса
+    restart: unless-stopped
