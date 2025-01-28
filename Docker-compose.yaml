@@ -13,5 +13,4 @@ services:
     #         - driver: nvidia
     #           count: all
     #           capabilities: [gpu]
-    # Добавим перезапуск сервиса
     restart: unless-stopped
